@@ -1,0 +1,8 @@
+
+config.cfg
+
+configurationProvider.pyc
+
+*.txt
+
+*.pyc
