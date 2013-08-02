@@ -30,7 +30,7 @@ def main (argv):
 	
 	cfg = ConfigurationProvider()
 	keywords = cfg.readSection('main_configuration','keywords')
-	deep = cfg.readSection('main_configuration', 'deep');
+	deep = cfg.readSection('main_configuration', 'profondita');
 	
 	kws_suggest = []
 	for keyword in keywords:
