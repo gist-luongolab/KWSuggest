@@ -38,7 +38,7 @@ def main (argv):
 		filename = "kwcr_%s.txt" % (keyword.replace(' ', '_'))
 		print filename
 		kwcorr = SuggestKeywords.getKeywordFromGoogleSuggest(keyword)
-		kws_suggest += getRecursiveCorrelationKw(kwcorr, kws_suggest, deep)
+		kws_suggest += getRecursiveCorrelationKw(kwcorr, kws_suggest, int(deep[0]))
 
 		storeOnFile(filename, kws_suggest)
 		
