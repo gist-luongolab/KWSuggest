@@ -6,3 +6,5 @@ configurationProvider.pyc
 *.txt
 
 *.pyc
+
+.DS_Store

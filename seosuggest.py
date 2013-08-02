@@ -30,6 +30,7 @@ def main (argv):
 	
 	cfg = ConfigurationProvider()
 	keywords = cfg.readSection('main_configuration','keywords')
+	deep = cfg.readSection('main_configuration', 'deep');
 	
 	kws_suggest = []
 	for keyword in keywords:
@@ -37,7 +38,7 @@ def main (argv):
 		filename = "kwcr_%s.txt" % (keyword.replace(' ', '_'))
 		print filename
 		kwcorr = SuggestKeywords.getKeywordFromGoogleSuggest(keyword)
-		kws_suggest += getRecursiveCorrelationKw(kwcorr, kws_suggest, 1)
+		kws_suggest += getRecursiveCorrelationKw(kwcorr, kws_suggest, deep)
 
 		storeOnFile(filename, kws_suggest)
 		
@@ -47,3 +48,6 @@ def main (argv):
 
 if __name__ == '__main__':
     main(sys.argv)
+    
+
+
