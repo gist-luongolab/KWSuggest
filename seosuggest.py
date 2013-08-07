@@ -41,6 +41,7 @@ def main (argv):
 		kws_suggest += getRecursiveCorrelationKw(kwcorr, kws_suggest, int(deep[0]))
 
 		storeOnFile(filename, kws_suggest)
+		kws_suggest[:] = [] 
 		
 		
 	

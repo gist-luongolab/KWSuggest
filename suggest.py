@@ -6,7 +6,6 @@ from urllib import urlencode
 from bs4 import BeautifulSoup
 import re
 import json
-import html5lib
 from html5lib import sanitizer
 from html5lib import treebuilders
 
@@ -35,7 +34,7 @@ class SuggestKeywords:
 
 	@staticmethod
 	def modifyCombinationQuery(query):
-		wait = random() * 10
+		wait = random() * 220
 		time.sleep(wait);
 		parser = BeautifulSoup(urlopen(SuggestKeywords._GOOGLE_SUGGEST_URL + query.encode('utf-8')))
 		suggestKeywords = []
